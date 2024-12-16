@@ -54,3 +54,10 @@ body{
     color: skyblue;
 }
 
+.mainhero{
+    width: 70px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
