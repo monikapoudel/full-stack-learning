@@ -54,7 +54,6 @@ try{
 app.delete("/student", async (req,res)=>{
   try{
      const deleteStudent=await Student.findByIdAndDelete(req.body.id);
-     console.log(deleteStudent);
   }catch (error){
     console.log("something went wrong,error");
 }

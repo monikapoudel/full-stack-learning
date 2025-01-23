@@ -41,11 +41,11 @@ app.get("/students", async (req, res) => {
 app.post("/students", async(req, res)=>{
 try{
   console.log(req.body);
-  const newStudent = await new Student(req.body).save();
+  const newStudent = await new Student (req.body).save();
   console.log(newStudent);
   return res.status(200).json(newStudent)
  } catch (error) {
-  console.log("something went wrong", error);
+  console.log("something went wrong");
  }
 
 });
@@ -54,7 +54,6 @@ try{
 app.delete("/student", async (req,res)=>{
   try{
      const deleteStudent=await Student.findByIdAndDelete(req.body.id);
-     console.log(deleteStudent);
   }catch (error){
     console.log("something went wrong,error");
 }
